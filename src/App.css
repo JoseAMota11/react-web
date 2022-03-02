@@ -1,38 +1,85 @@
-.App {
-  text-align: center;
+:root{
+  --bc-header: #21222A;
+  --primary-color: #61dafb;
+  --bc-container: #282D35;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Navbar{
+  background-color: var(--bc-header);
+  width: 100%;
+  height: 91px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 16px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Logo{
+  display: flex;
+  height: inherit;
+  align-items: center;
+}
+
+.logo-react-text{
+  color: var(--primary-color);
+  margin: 0;
+
+}
+
+.img-react{
+  width: 60px;
+  height: 60px;
+}
+
+.project-text{
+  color: #ddd;
+  font-weight: 600;
+  margin: 15px;
+}
+
+.Container{
+  height: calc(100vh - 91px);
+  padding: 30px;
+  background-color: var(--bc-container);
+}
+
+.Title{
+  color: #fff;
+  font-size: 39px;
+  margin-bottom: 20px;
+}
+
+.list-container{
+  margin-left: 40px;
+  color: var(--bc-container);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 15px;
+  /* z-index: 2; */
 }
 
-.App-link {
-  color: #61dafb;
+.list-container li{
+  color: #fff;
+  font-size: 16px;
+  z-index: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.list-container li::marker{
+  color: var(--primary-color);
+  font-size: 20px;
+}
+
+.bg-img{
+  width: 132px;
+  height: 263px;
+  position: absolute;
+  right: 0;
+  background: url('./reactjs-icon.png');
+  transform: translate(0px, -200px);
 }
